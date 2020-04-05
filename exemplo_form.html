@@ -1,0 +1,64 @@
+<h3>Alguns tipos de campo de Formulários</h3>
+<form action="mailto:josemapereira@gmail.com" method="POST" enctype="text/plain"> 
+     <!-- Aceitar caracteres utf-8 -->
+    <table cellspacing="20">
+        <tr>
+            <td><label for="nome" id="nome" name="nome"> Nome:</label></td>
+            <td><input type="text" name="nome" value="Valor por omissão" minlength="1" maxlength="50" size="50"><br></td>
+        </tr>
+        <tr>
+            <td><label for="morada"> Morada:</label><br></td>
+            <td><textarea name="morada" id="morada" cols="50" rows="3"> </textarea> <br><br></td>
+        </tr>
+        <tr>
+            <td><label for="CodigoPostal">Código Postal</label></td>
+            <td><input type="number" id="CodigoPostal" name="CodigoPostal" max="9999">
+            <label for="CodigoRua">-</label> <input type="number" id="CodigoRua" name="CodigoRua" max="999"><br>
+            </td>
+        </tr>
+        <tr>
+            <td> <label for="tel">Telefone:</label> </td> 
+            <td><input type="tel" id="tel" name="tel" maxlength="15"></td>
+        </tr>
+        <tr>
+            <td><label for="email">Email:</label> </td>
+            <td><input type="email" id="email" name="email" maxlength="50"><br></td>   
+        </tr>
+        <tr>
+            <td><label for="Preferência">Preferência de Contacto:</label>
+            <td>
+            <input list="lista_preferencia" name="Preferência" id="Preferência"></td>
+                <datalist id="lista_preferencia">
+                    <option value="Tel"></option>
+                    <option value="Email"></option>
+                </datalist>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="opcoes"></label>
+                <fieldset>
+                    <legend>Preferência de Contacto</legend>
+                    <input type="radio" name="Preferência" id="opcao1" value="Tel"> <label for="opcao1"> Telefone</label><br>
+                    <input type="radio" name="Preferência" id="opcao2" value="Email"> <label for="opcao1"> Email</label><br>
+                </fieldset>
+            </td>
+        </tr>
+        <tr>
+            <hr><br>
+            <td><label for="DataNascimento">Data de Nascimento:</label></td>
+            <td> <input type="date" id="DataNascimento"> <br></td>
+        </tr>
+        <tr>
+            <td><label for="foto">Selecionar Foto</label></td>
+            <td> <input type="file" id="foto"> <br></td>
+        <tr>
+            <td> <label for="altura">Escolha a Altura (0-250)cm :</label> </td>
+            <td>   <input type="range" id="altura" min=0 max=250> <br> </td>
+        </tr>
+    </table>
+    
+    <center> <input type="submit" value="Enviar"> <input type="reset" value ="Limpar"></center>  
+     <!-- O comando center (a vermelho) está desatualizado e por isso não deve ser usado.
+        A formatação deve ser feita com CSS. -->
+</form>
